@@ -28,10 +28,12 @@ class Player(GameSprite):
   #метод для управления спрайтом стрелками клавиатуры
    def update(self):
        keys = key.get_pressed()
-       if keys[K_LEFT] and self.rect.x > 5:
+       if keys[K_UP] and self.rect.x > 5:
            self.rect.x -= self.speed
-       if keys[K_RIGHT] and self.rect.x < win_width - 80:
+       if keys[K_DOWN] and self.rect.x < win_width - 80:
            self.rect.x += self.speed
+#создание объектов классов
+player_1 = Player(img_bg)
 #цикл игры
 game = True
 finish = False
